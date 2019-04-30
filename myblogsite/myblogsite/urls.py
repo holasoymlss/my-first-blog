@@ -23,9 +23,6 @@ urlpatterns = [
 from django.urls import include
 urlpatterns += [
     #path('blog/', include('blog.urls')), #Todas las URL que empiecen por blog irán a la vista blog.urls y Django buscará más instrucciones allí.
-<<<<<<< HEAD
-	#path('', include('blog.urls')), #utilizo este path para que la URL de inicio de la página no tenga que contener la palabra blog
 	path('', include('blog.urls')), #utilizo este path para que la URL de inicio de la página no tenga que contener la palabra blog
 
->>>>>>> 783841c7436516d57d5d802432972f0b1385f8f0
 ]
