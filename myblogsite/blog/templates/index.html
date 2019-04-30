@@ -1,0 +1,139 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+	<title>Blog</title>
+{% endblock %}
+
+
+{% block cabecera %}
+
+	<img src="C:\Users\Administrador\Desktop\Logo - B.png">
+
+    <TABLE border="1" >
+      <TR><TD>
+        <TABLE>
+          <TR >
+			<TD colspan="2" align="center"><a href="{% url 'post_list' %}">Leer más</a></TD>
+            <TD colspan="2" align="center"><INPUT type="submit" value="Archivos"></TD>
+		    <TD colspan="2" align="center"><INPUT type="submit" value="Acerca de"></TD>
+          </TR>
+        </TABLE>
+      </TD></TR>
+    </TABLE>
+	
+{% endblock %}
+
+
+
+{% block título %}
+	<h1>Blog de programación</h1>
+{% endblock %}
+
+{% block content %}
+	<TABLE>
+	
+	<TR>
+		<TD><P>Fecha</P></br></TD>
+		
+		<TD>
+			<TABLE border="1">
+				<TR><TD>
+					<TABLE width=250px>
+					<TR>
+						<TD ><H3>Este es el título del post</H3></P></br></TD>
+					</TR>	  
+					<TR>
+						<TD><P>Aquí va el resumen del primer post</P></TD>
+					</TR>
+					<TR>
+						<TD colspan="2" align="center"><a href="{% url 'post_list' %}">Leer más</a></TD>
+					</TR>
+					</TABLE>
+				</TD></TR>
+			</TABLE>
+		</TD>
+
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+
+		<TD><P>Fecha</P></br></TD>
+		
+		<TD>
+			<TABLE border="1">
+				<TR><TD>
+					<TABLE width=250px>
+					<TR>
+						<TD><H3>Este es el título del post. .</H3></P></br></TD>
+					</TR>	  
+					<TR>
+						<TD><P>Aquí va el resumen del segundo post</P></TD>
+					</TR>
+					<TR >
+						<TD colspan="2" align="center"><INPUT type="submit" value="Leer más"></TD>
+					</TR>
+					</TABLE>
+				</TD></TR>
+			</TABLE>
+		</TD>
+
+	</TR>
+
+	<TR>
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+
+	</TR>
+
+	<TR>
+		<TD><P>Fecha</P></br></TD>
+		
+		<TD>
+			<TABLE border="1">
+				<TR><TD>
+					<TABLE width=250px>
+					<TR>
+						<TD><H3>Este es el título del post</H3></P></br></TD>
+					</TR>	  
+					<TR>
+						<TD><P>Aquí va el resumen del tercer post</P></TD>
+					</TR>
+					<TR >
+						<TD colspan="2" align="center"><INPUT type="submit" value="Leer más"></TD>
+					</TR>
+					</TABLE>
+				</TD></TR>
+			</TABLE>
+		</TD>
+		
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+		<TD>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </TD>
+		
+		<TD><P>Fecha</P></br></TD>
+		
+		<TD>
+			<TABLE border="1">
+				<TR><TD>
+					<TABLE width=250px>
+					<TR>
+						<TD><H3>Este es el título del post</H3></P></br></TD>
+					</TR>	  
+					<TR>
+						<TD><P>Aquí va el resumen del cuarto post</P></TD>
+					</TR>
+					<TR >
+						<TD colspan="2" align="center"><INPUT type="submit" value="Leer más"></TD>
+					</TR>
+					</TABLE>
+				</TD></TR>
+			</TABLE>
+		</TD>
+
+	</TR>
+
+</TABLE >
+
+{% endblock %}
+

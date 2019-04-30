@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.1//EN” “http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd”>
+<html lang="en">
+<head>
+  
+  {% block title %}<title>Blog</title>{% endblock %}
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Responsive meta tag. Utilizada por dispositivos móviles e ignorada por la computadora de sobremesa. -->
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+  
+  
+  
+	<style>
+		* { 
+			margin:0;
+			padding:0;
+		}
+	  
+		body {
+			position:relative;
+			background-colour:#bbb;
+			font-family:verdana;
+		}
+	  
+		h1 {
+
+		}
+	  
+		img{
+			display: block;
+			margin: auto auto auto 2%;
+		}
+	  
+		#título{
+			color:#c0c;
+			font-size:24px;
+			display: flex;
+			margin: 3% 0 0 0;
+		}
+	  
+		#cabecera{
+			position:relative;
+			top: 0;
+			width: 100%;  <!-- Cabecera ocupar todo el ancho de la pantalla -->
+			margin: 0 0 0 0;
+			background-color:#bbb;
+			display: flex; justify-content: flex-end; align-items: flex-end;
+			position: fixed;  <!-- Hacemos que la cabecera tenga una posición fija -->
+		}
+
+		#contenido{
+			position:relative;
+			display: flex; justify-content: center; align-items: center;
+			margin: 7% 0% 0% 15%;
+		}
+
+    </style>
+	
+</head>
+
+<body>
+
+	<div id="contenedor">
+		<div id="cabecera">
+		{% block cabecera %}{% endblock %}
+		</div>
+	
+		<div id="título">
+		{% block título %}{% endblock %}
+		</div>
+		
+		<div id="contenido">
+		{% block content %}{% endblock %}
+		</div>
+
+	</div>
+
+</body>
+</html>
