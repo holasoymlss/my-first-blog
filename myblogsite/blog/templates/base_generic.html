@@ -8,12 +8,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Responsive meta tag. Utilizada por dispositivos móviles e ignorada por la computadora de sobremesa. -->
   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   
-  <!-- Add additional CSS in static file -->
+  <!-- Creamos script para animaciones usando createjs -->
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+  <script src="https://code.createjs.com/1.0.0/tweenjs.min.js"></script>
+  <script src="lib/easeljs-0.8.2.min.js"></script>
+  <script>
+  function init() {
+	var stage = new createjs.Stage("micanvas");
+	var circle = new createjs.Shape();
+	circle.graphics.setStrokeStyle(3).beginStroke("#0D0D0D").drawCircle(0, 0, 50); //graphics.beginStroke --> dibuja contorno; graphics.beginFill --> establece relleno; graphics.setStrokeStyle(x) --> establece el ancho de la línea del contorno
+	circle.x = 100;
+	circle.y = 100;
+	stage.addChild(circle);
+	stage.update();
+	var line = new createjs.Shape();
+	line.graphics.setStrokeStyle(3).beginStroke("Crimson"); //Dibuja el contorno de la forma
+	line.graphics.moveTo(100, 150); //moveTo(x, y) --> mueve la pluma a las coordenadas especificadas por x e y
+	line.graphics.lineTo(100, 200); //lineTo(x, y) --> dibuja una línea desde la posición actual del dibujo a la posición especificada por x e y
+	line.graphics.endStroke(); //Finaliza el dibujo
+	stage.addChild(line);
+	stage.update();
+	var circle = new createjs.Shape();
+	circle.graphics.setStrokeStyle(3).beginStroke("#0D0D0D").drawCircle(0, 150, 50);
+	circle.x = 100;
+	circle.y = 100;
+	stage.addChild(circle);
+	stage.update();
+    
+	/* circle.graphics.beginFill("Crimson").drawCircle(0, 0, 50);
+    circle.x = 100;
+    circle.y = 100;
+    stage.addChild(circle);
+    createjs.Tween.get(circle, {loop: true})
+      .to({x: 400}, 1000, createjs.Ease.getPowInOut(4))
+      .to({alpha: 0, y: 75}, 500, createjs.Ease.getPowInOut(2))
+      .to({alpha: 0, y: 125}, 100)
+      .to({alpha: 1, y: 100}, 500, createjs.Ease.getPowInOut(2))
+      .to({x: 100}, 800, createjs.Ease.getPowInOut(2));
+    createjs.Ticker.setFPS(60);
+    createjs.Ticker.addEventListener("tick", stage); */
+  }
+  
+</script>
+
+
+
+
+
+  <!-- Add additional CSS in static file 
   {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-  
-  
-  
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}"> -->
+
 	<style>
 		* { 
 			margin:0;
@@ -21,55 +66,120 @@
 		}
 	  
 		body {
-			position:relative;
-			background-colour:#bbb;
-			font-family:verdana;
+			font-family:bentonsansmedium;
+		}
+		
+		@keyframes changeColor {
+			from { background: red; }  /* Primer fotograma */
+			to { background: green; }  /* Último fotograma */
+		}
+		
+		@-webkit-keyframes AnimInfinita{
+			0%{
+				left:0px;
+				border-radius:0px;
+			}
+			50%{
+				background-color:#e67e22;
+				transform:rotate(0deg);
+			}
+			100%{
+				left:500px;
+				border-radius:40px;
+				background-color:#16a085;
+				transform:rotate(360deg);
+			}
 		}
 	  
-		h1 {
-
-		}
+		ul {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			position: fixed;
+			overflow: auto;
+		}		
 	  
-		img{
+		.boton_personalizado, li a{
+			text-decoration: none;
+			padding: 12px;
+			font-weight: 600;
+			font-size: 1rem;
+			color: #ffffff;
+			background-color: #1883ba;
+			border-radius: 6px;
+			border: 2px solid #0016b0;
 			display: block;
-			margin: auto auto auto 2%;
+			width: 50%;
+			margin: 10%;
+			<!--width: 100px;  Fijamos el largo del botón -->
+			<!-- height: 50px; Fijamos el ancho del botón -->
 		}
-	  
+
+		.boton_personalizado, li a:hover{
+			color: #1883ba;
+			background-color: #ffffff;
+			transition: all 0.5s ease-in; 
+		}
+		
+		.infinita{
+			animation-name: AnimInfinita;
+			animation-duration: 3s;
+			animation-iteration-count:infinite;	
+			animation-direction:alternate;
+			animation-timing-function:linear;
+			animation-delay:1s;
+		}
+
 		#título{
 			color:#c0c;
-			font-size:24px;
-			display: flex;
-			margin: 3% 0 0 0;
+			font-size:18px;
+			height: 150px;
+			display: flex; justify-content: center; align-items: center;
+			<!-- animation: changeColor 3s ease 0s infinite;  /* Relaciona con @keyframes */ -->
 		}
-	  
-		#cabecera{
-			position:relative;
-			top: 0;
-			width: 100%;  <!-- Cabecera ocupar todo el ancho de la pantalla -->
-			margin: 0 0 0 0;
-			background-color:#bbb;
-			display: flex; justify-content: flex-end; align-items: flex-end;
-			position: fixed;  <!-- Hacemos que la cabecera tenga una posición fija -->
+		
+		#título:hover{
+			color: #1883ba;
+		}
+		
+		#sideNavigation{
+			position: relative;
+			left: 1000px;
 		}
 
-		#contenido{
-			position:relative;
-			display: flex; justify-content: center; align-items: center;
-			margin: 7% 0% 0% 15%;
+		.container-full {
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		.container-full.skrollable.skrollable-after {}
+		
+		#axis:hover .move-right{
+			-webkit-transform: translate(350px,0);
+			visibility:visible;
+		}
+		
+		.object {
+			-webkit-transition: all 2s ease-in-out;
+		}
+		
+		.van {
+		
 		}
 
     </style>
 	
 </head>
 
-<body>
+<body translate="no" onload="init()">
 
 	<div id="contenedor">
-		<div id="cabecera">
-		{% block cabecera %}{% endblock %}
+		
+		<div id="sideNavigation">
+		{% block lateral %}{% endblock %}
 		</div>
 	
-		<div id="título">
+		<div id="título" style="background-color:#FFEFD5">
 		{% block título %}{% endblock %}
 		</div>
 		

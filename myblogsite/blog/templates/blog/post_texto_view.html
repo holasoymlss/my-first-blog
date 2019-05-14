@@ -1,0 +1,81 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+	<title>{{ post.titulo }}</title>
+{% endblock %}
+
+{% block lateral %}
+
+
+
+<ul style="top:200px">
+  <li ><a href="{% url 'info' %}">Información personal</a></li>
+  <li><a href="{% url 'contacto' %}">Contacto</a></li>
+  <li><a href="{% url 'post_list' %}">  Página principal </a></li>
+
+</ul>
+
+
+	
+{% endblock %}
+
+{% block título %}
+	<h1><br/>{{ post.resumen }}</h1>
+{% endblock %}
+
+
+{% block content %}
+
+
+		<div id="axis">
+		<img class="object move-right" src="https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_02.jpg?20190509023000" width="386" height="181">
+		
+		</div>
+
+{% endblock %}	
+
+
+{% block content %}
+
+<script>
+window.sr = ScrollReveal({ reset: true });
+
+// Custom Settings
+sr.reveal('.foo-1', { duration: 200 });
+
+sr.reveal('.foo-2', { 
+  origin: 'right', 
+  duration: 2000 
+});
+
+sr.reveal('.foo-3', { 
+  rotate: { x: 100, y: 100, z: 0 },
+  duration: 1000
+});
+
+sr.reveal('.foo-4', { 
+  viewFactor: 0.5
+});
+
+sr.reveal('.foo-5', { 
+  duration: 200 
+});
+</script>
+<div class="foo  foo-1">First
+</div>
+
+<div class="foo  foo-2">Second
+</div>
+
+<div class="foo  foo-3">Third
+</div>
+
+<div class="foo  foo-4">Fourth
+</div>
+
+<div class="foo  foo-5">Fifth
+</div>
+
+{% endblock %}
+
+

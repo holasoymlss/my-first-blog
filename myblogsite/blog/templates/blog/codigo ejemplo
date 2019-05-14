@@ -1,0 +1,57 @@
+	
+	
+					#contenido{
+			display: flex; justify-content: center; align-items: center;
+			margin: 7% 0% 0% 0%;
+			
+		}
+	
+	
+	
+	
+	
+	
+	
+	
+	#url(r'^blog/(?P<slug>[-\w]+)/(?P<pk>\d+)/$', views.post_texto, name='post_texto'),
+	
+	
+	<div class="container-full skrollable skrollable-after" style="width: 100%; height: calc(100vh - 41px); background: url(&quot;https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_02.jpg?20190509023000&quot;) center center / cover no-repeat; position: fixed; top: 41px; transform: translateY(0vh);" data-1500="position:fixed;top:41px;transform:translateY(100vh);" data-2500="position:fixed;top:41px;transform:translateY(0vh);">
+        </div>
+		
+		
+		
+		
+		<html>
+		
+		<head>
+		
+		<meta name="viewport" content="width=device-width, minimum-scale=0.1">
+		<title>D_02.jpg (1920×900)</title>
+		
+		</head>
+		
+		<body style="margin: 0px; background: #0e0e0e;">
+		<img style="-webkit-user-select: none;cursor: zoom-in;" src="https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_02.jpg?20190509023000" width="386" height="181">
+		</body>
+		</html>
+		
+		
+		
+		<div style="text-align: right;">
+                <img style="height: 80vh;padding-right: 4vw;margin-top: 7vh;" ng-src="https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_06_02.gif?20190509023000" src="https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_06_02.gif?20190509023000">
+            </div>
+			
+			
+			
+			
+		<div class="container-full skrollable skrollable-after" onclick="inditex.xOpenMultipleQuickLook([101951503,101812607,101924001,101793126,101950240],[521, '800', '060', 800, '040'],true, true, true, true, true);" style="cursor: pointer; width: 100%; height: calc(100vh - 41px); background: url(&quot;https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_06_01.jpg?20190509023000&quot;) center center / cover no-repeat; position: fixed; top: 41px; transform: translateX(0vw);" data-10000="position:fixed;top:41px;transform:translateX(100vw);" data-11000="position:fixed;top:41px;transform:translateX(0vw);">
+            <div style="text-align: right;">
+                <img style="height: 80vh;padding-right: 4vw;margin-top: 7vh;" ng-src="https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_06_02.gif?20190509023000" src="https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_06_02.gif?20190509023000">
+            </div>
+        </div>
+	
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>	

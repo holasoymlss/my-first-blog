@@ -4,48 +4,44 @@
 	<title>Lista de post</title>
 {% endblock %}
 
-{% block cabecera %}
+{% block lateral %}
 
-	<img src="C:\Users\Administrador\Desktop\Logo - B.png">
 
-    <TABLE border="1" >
-      <TR><TD>
-        <TABLE>
-          <TR >
-			<TD colspan="2" align="center"><a href="{% url 'post_list' %}"><INPUT type="submit" value="Home"></a></TD>
-            <TD colspan="2" align="center"><INPUT type="submit" value="Archivos"></TD>
-		    <TD colspan="2" align="center"><INPUT type="submit" value="Acerca de"></TD>
-          </TR>
-        </TABLE>
-      </TD></TR>
-    </TABLE>
+
+<ul style="top:200px">
+  <li><a href="{% url 'info' %}">Información personal</a></li>
+  <li><a href="{% url 'contacto' %}">Contacto</a></li>
+
+</ul>
+
+
 	
 {% endblock %}
 
 {% block título %}
-	<h1>Presentación</h1>
+	<h1><br/>María Laura Sanguiao Sánchez</h1>
 {% endblock %}
 
 
 {% block content %}
 
-<TABLE>
+<TABLE style=" display: flex; justify-content: center; align-items: center; margin: 7% 0% 0% 0%;">
 {% for post in posts %}
 
 <TR>
 		
 	<TD>
-		<TABLE border="1">
+		<TABLE border="0">
 			<TR><TD>
-				<TABLE width=500px height=150px>
+				<TABLE width=700px height=150px style="border-radius: 20px; border: 1px solid #0016b0;">
 				<TR>
-					<TD ><H5>{{post.fecha}}</H5></P></br></TD>
+					<TD ><H5 style="margin-left: 20px">{{post.fecha}}</H5></P></br></TD>
 				</TR>
 				<TR>
-					<TD ><H3>{{ post.titulo }}</H3></P></br></TD>
+					<TD ><H3 style="margin-left: 20px">{{ post.titulo }}</H3></P></br></TD>
 				</TR>	  
 				<TR>
-					<TD><P>{{ post.resumen }}</P></TD>
+					<TD><P style="margin-left: 20px">{{ post.resumen }}</P></TD>
 				</TR>
 				<TR>
 					<TD colspan="2" align="center"><a href="{% url 'post_texto' pk=post.id %}">Leer más</a></TD>

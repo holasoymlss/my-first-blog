@@ -4,24 +4,46 @@
 	<title>{{ post.titulo }}</title>
 {% endblock %}
 
-{% block cabecera %}
+{% block lateral %}
 
-	<img src="C:\Users\Administrador\Desktop\Logo - B.png">
 
-    <TABLE border="1" >
-      <TR><TD>
-        <TABLE>
-          <TR >
-			<TD colspan="2" align="center"><a href="{% url 'post_list' %}"><INPUT type="submit" value="Home"></a></TD>
-            <TD colspan="2" align="center"><INPUT type="submit" value="Archivos"></TD>
-		    <TD colspan="2" align="center"><INPUT type="submit" value="Acerca de"></TD>
-          </TR>
-        </TABLE>
-      </TD></TR>
-    </TABLE>
+
+<ul style="top:200px">
+  <li ><a href="{% url 'info' %}">Información personal</a></li>
+  <li><a href="{% url 'contacto' %}">Contacto</a></li>
+  <li><a href="{% url 'post_list' %}">  Página principal </a></li>
+
+</ul>
+
+
 	
 {% endblock %}
 
 {% block título %}
-	<h1>{{ post.resumen }}</h1>
+	<h1 ><br/>{{ post.resumen }}</h1>
 {% endblock %}
+
+
+
+{% block content %}
+
+<!-- En el caso de que no indiquemos las dimesiones de un canvas, estas serán de 300x150 -->
+<canvas height="600px" width="600px" id="micanvas" onmouseover="mouseOver()" onmouseout="mouseOut()"></canvas>
+
+<script>
+function mouseOver() {
+  document.getElementById("axis").style.visibility = "visible";
+}
+
+function mouseOut() {
+  document.getElementById("axis").style.visibility = "hidden";
+}
+</script>
+
+	<div id="axis" style="visibility:hidden">
+		<img class="object move-right" src="https://static.bershka.net/4/static/itxwebstandard/images/home/2019/lookbooks/festivalism/D_02.jpg?20190509023000" width="386" height="181">
+	</div>
+	
+
+
+{% endblock %}	
