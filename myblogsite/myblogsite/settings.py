@@ -28,7 +28,6 @@ DEBUG = True
 ALLOWED_HOSTS = [
 '*'
 'community.pythonanywhere.com' 
-'holasoymlss.pythonanywhere.com'
 ]
 
 
