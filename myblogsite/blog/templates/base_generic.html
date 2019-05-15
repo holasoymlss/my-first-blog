@@ -21,6 +21,7 @@
 	circle.y = 100;
 	stage.addChild(circle);
 	stage.update();
+	var stage = new createjs.Stage("micanvas2");
 	var line = new createjs.Shape();
 	line.graphics.setStrokeStyle(3).beginStroke("Crimson"); //Dibuja el contorno de la forma
 	line.graphics.moveTo(100, 150); //moveTo(x, y) --> mueve la pluma a las coordenadas especificadas por x e y
@@ -28,6 +29,7 @@
 	line.graphics.endStroke(); //Finaliza el dibujo
 	stage.addChild(line);
 	stage.update();
+	var stage = new createjs.Stage("micanvas3");
 	var circle = new createjs.Shape();
 	circle.graphics.setStrokeStyle(3).beginStroke("#0D0D0D").drawCircle(0, 150, 50);
 	circle.x = 100;
